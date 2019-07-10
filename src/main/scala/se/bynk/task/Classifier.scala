@@ -1,18 +1,18 @@
 package se.bynk.task
 
 trait Classifier {
-  def apply(needle: String, haystack: String): Int
+  def apply(haystack: String, needle: String): Int
 }
 
 object SimpleClassifier extends Classifier {
-  def apply(needle: String, hayStack: String) = {
+  def apply(hayStack: String, needle: String): Int = {
     if (hayStack contains needle) 100
     else 0
   }
 }
 
 object CaseInsensitiveClassifier extends Classifier {
-  def apply(needle: String, hayStack: String) = {
+  def apply(hayStack: String, needle: String): Int = {
     if (hayStack.toLowerCase() contains needle.toLowerCase()) 100
     else 0
   }
