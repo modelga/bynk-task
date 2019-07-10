@@ -1,6 +1,7 @@
 package se.bynk.task
 
 trait Classifier {
+
   def apply(haystack: String, needle: String): Int
 }
 
