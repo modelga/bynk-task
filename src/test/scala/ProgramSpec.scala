@@ -17,6 +17,13 @@ class ProgramSpec extends FlatSpec {
     }
   }
 
+  trait LongerResultsMatcher {
+    val results = (1 to 20).reverse.map(("Item", _)).toList
+    val matcher = new Matcher {
+      def apply(needle: String): List[(String, Int)] = results
+      val info: String = "LongerResultsMatcher"
+    }
+  }
   trait Streams {
     val readQueue = mutable.Queue[String]()
     val writeQueue = mutable.Queue[Any]()
@@ -71,6 +78,18 @@ class ProgramSpec extends FlatSpec {
     assert(writeQueue.dequeue() === "1. Item score: 100\n")
     assert(writeQueue.dequeue() === "2. Another score: 50\n")
     assert(writeQueue.dequeue() === "search using PreparedResults> ")
+    assert(writeQueue.dequeue() === "Done.\n")
+  }
+
+  it should "be able to reduce the output" in new LongerResultsMatcher with Streams {
+    readQueue.enqueue("Listing")
+    Program.iterate(matcher, read, write)
+    assert(writeQueue.dequeue() === "search using LongerResultsMatcher> ")
+    results.take(10).zipWithIndex.foreach {
+      case ((item, score), index) =>
+        assert(writeQueue.dequeue() === s"${index + 1}. $item score: $score\n")
+    }
+    assert(writeQueue.dequeue() === "search using LongerResultsMatcher> ")
     assert(writeQueue.dequeue() === "Done.\n")
   }
 }
