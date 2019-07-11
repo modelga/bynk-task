@@ -22,3 +22,11 @@ To exit from the app type `.exit` in prompt.
 ## Run tests
 
 To run tests type `sbt tests`
+
+
+### Accessible algoritgms
+
+- simple      - Classifier that matches if query is a part of the file name
+- simple-ci   - Same as above but case insensitive
+- split       - Splits the query and filenames by " " then compare it as simple-ci
+- levenshtein - levenshtein distance calculation 

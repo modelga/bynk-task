@@ -3,7 +3,7 @@ import se.bynk.task._
 
 class ClassifierSpec extends FlatSpec {
   def simplify(classifier: Classifier) = (needle: String, hayStack: String) => {
-    classifier(needle, None)(hayStack)
+    classifier(needle, Some(List(needle, hayStack)))(hayStack)
   }
   trait SimpleClassifier {
     val classifier = simplify(SimpleClassifier)
@@ -46,5 +46,27 @@ class ClassifierSpec extends FlatSpec {
   }
   it should "return 100 for not being related to haystack string" in new CaseInsensitiveClassifier {
     assert(classifier("Match", "not related") === 0)
+  }
+
+  trait SplitClassifiers {
+    val classifier = simplify(SplitStringClassifier)
+  }
+
+  "A SplitStringClassifier" should "return positive value if part matches" in new SplitClassifiers {
+    assert(classifier("m a t c h", "to sma t c h") > 0)
+  }
+  it should "return 0 for two irrelevant strings" in new SplitClassifiers {
+    assert(classifier("not matching", "irr relevant") === 0)
+  }
+
+  trait LevenshteinClassifier {
+    val classifier = simplify(LevenshteinStringClassifier)
+  }
+
+  "A LevenshteinClassifier" should "return almost maximum value" in new LevenshteinClassifier {
+    assert(classifier("metch", "match") === 4)
+  }
+  it should "return 0 for two irrelevant strings" in new LevenshteinClassifier {
+    assert(classifier("bbbbb", "aaaaa") === 0)
   }
 }
