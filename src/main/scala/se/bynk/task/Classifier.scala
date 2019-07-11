@@ -1,33 +1,33 @@
 package se.bynk.task
 
 trait Classifier {
-  type Classify = String => Int
-  def apply(haystack: String, dataSet: Option[List[String]] = None): Classify
+  type Classify = List[String] => Int
+  def apply(needle: String): Classify
 }
 
 object SimpleClassifier extends Classifier {
-  def apply(needle: String, dataSet: Option[List[String]] = None) = {
-    case hayStack if hayStack contains needle => 100
-    case _                                    => 0
+  def apply(needle: String) = {
+    case hayStack if hayStack.exists(_ contains needle) => 100
+    case _                                              => 0
   }
 }
 
 object CaseInsensitiveClassifier extends Classifier {
-  def apply(needle: String, dataSet: Option[List[String]] = None) = {
+  def apply(needle: String) = {
     val prepared = needle.toLowerCase()
 
     {
-      case hayStack if hayStack.toLowerCase() contains prepared => 100
-      case _                                                    => 0
+      case hayStack if hayStack.exists(_.toLowerCase() contains prepared) => 100
+      case _                                                              => 0
     }
   }
 }
 
 object SplitStringClassifier extends Classifier {
-  def apply(needle: String, dataSet: Option[List[String]] = None) = {
+  def apply(needle: String) = {
     val needles = needle.toLowerCase().split(" ")
     haystack => {
-      val haystacks = haystack.split(" ")
+      val haystacks = haystack.flatMap(_.split(" "))
       val matchingParts = needles.intersect(haystacks).length
       (100 * matchingParts) / Math.min(needles.length, haystack.length)
     }
@@ -54,20 +54,20 @@ object LevenshteinStringClassifier extends Classifier {
     sd(s1.toList, s2.toList)
   }
 
-  def apply(needle: String, dataSet: Option[List[String]] = None) = {
-    val maximalDistance =
-      dataSet
-        .map(_ :+ needle)
-        .map(_.sortWith(_.length > _.length))
-        .map(_.headOption)
-        .get
-        .map(_.length)
-        .getOrElse(0)
-    haystack => {
-      maximalDistance - stringDistance(needle, haystack) match {
-        case a if a < 0 => 0
-        case v          => v
-      }
+  def apply(needles: String) = { haystacks =>
+    {
+      val tokensCount = haystacks.flatMap(_.split(" ")).length
+
+      val distances: List[Int] = for {
+        tokens <- haystacks
+        token <- tokens.toLowerCase().split(" ")
+        needle <- needles.toLowerCase().split(" ")
+        dist = stringDistance(token, needle)
+      } yield dist
+      List(10000, 5000, 3000, 1000, 500).zipWithIndex
+        .map { case (factor, distance) => factor * distances.count(_ == distance) }
+        .map(_ / tokensCount)
+        .reduce(Math.addExact)
     }
   }
 }

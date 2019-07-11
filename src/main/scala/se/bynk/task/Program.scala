@@ -3,6 +3,7 @@ package se.bynk.task
 sealed trait ReadFileError
 case object MissingPathArg extends ReadFileError
 case class NotDirectory(error: String) extends ReadFileError
+case class IO(t: Throwable) extends ReadFileError
 case class FileNotFound(t: Throwable) extends ReadFileError
 
 import java.io.File
@@ -29,7 +30,7 @@ object Program {
   }
 
   def prepareData(file: File, classifier: Classifier): Matcher = {
-    val dataSet = file.list().filter(_.endsWith(".txt")).toList
+    val dataSet = file.listFiles(_.getPath.endsWith(".txt")).map(FileContent).toList
     Matching(dataSet, classifier)
   }
 

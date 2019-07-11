@@ -1,0 +1,132 @@
+Computer science is a rather young discipline, though computing and coded communication have been around for thousands of years. Sumerian abacus, Blaise Pascal’s calculator, Morse code, Braille code, modern computers, smartphones, and artificial intelligence are all important parts of it.
+
+If you’re a developer or programmer looking to sharpen your skills in a particular programming language or a computer science student keen on exploring the history of computing, there are many great books that can help you advance your knowledge and career.
+
+Quick Look: The Best Computer Science Books To Read Right Now
+The Search by John Battelle – Get this book
+Data Structures and Algorithms with Scala by Bhim P. Upadhyaya – Get this book
+Structured Computer Organization 6th Edition by Andrew S. Tanenbaum, Todd Austin – Get this book
+The Second Machine Age by Erik Brynjolfsson, Andrew McAfee – Get this book
+Algorithms to Live By by Brian Christian, Tom Griffiths – Get this book
+Game Theory for Security and Risk Management by Stefan Rass, Stefan Schauer – Get this book
+The Self-Taught Programmer by Cory Althoff – Get this book
+The Computer Book by Simson L. Garfinkel, Rachel H. Grunspan – Get this book
+Code by Charles Petzold – Get this book
+Structure and Interpretation of Computer Programs 2nd Edition by Harold Abelson, Julie Sussman, and Gerald Jay Sussman – Get this book
+What You Should Look for in a Computer Science Book
+When shopping for a computer science book, you should pay close attention to the following 3 criteria – the author’s background and authority, specific skills taught in the book, and the audience level. Let’s take a closer look at each.
+
+Author Background and Authority
+First, you should check out the writer of the book you are considering. Check their reputation in the computer science world and whether they’re a true authority on the subject they’re writing about.
+
+You should also investigate whether they’ve worked with large tech corporations or have a background in teaching at MIT or other prestigious universities.
+
+Specific Skill
+Next, you should check if the book you intend to buy teaches specific skills you want to incorporate into your arsenal. Let’s say that you want to learn how to build machine learning systems.
+
+In that case, a book on the history of computing and code probably won’t be the best fit. Likewise, if you’re interested in making Android and iOS apps, there’s not much you can learn from a book on Python.
+
+Audience Level
+Finally, you should take the current level of your knowledge and skills into consideration. If you’re just starting out, a book written with beginners in mind would be the best match.
+
+If you’re an experienced pro, look for books that cover in-depth concepts and advanced features of the language you program in.
+
+Our Picks for the Best Computer Science Books
+Here is a list of our favorite computer science books.
+
+1. The Search by John Battelle
+Who’s it for? Beginners
+Price: On sale
+In The Search, the author John Battelle explains how Google and similar search engines shape our lives and the world. This magnificent book takes a close look at how search engines work and how they impact various fields such as job searching, pop culture, civil liberties, dating, media, marketing, and others.
+
+Battelle recounts the history of search engines and touches upon the future of online search. He also explains how Google pushed other search engines out of contention. Finally, Battelle claims that Google’s unique repository of search results and queries will lead the tech world of tomorrow.
+
+Get this book
+
+2. Data Structures and Algorithms with Scala by Bhim P. Upadhyaya
+Who’s it for? Intermediate to advanced
+Price: On sale
+This book aims at developers/programmers and students who work with Scala. It continues and expands on the concepts Upadhyaya introduced in Programming with Scala: Language Exploration. If you’re just starting out with Scala, it is recommended to get both books.
+
+In Data Structures and Algorithms with Scala, Upadhyaya covers data structures and algorithms. Design patterns, lists, arrays, hash tables, sorting, binary trees, and other important topics are covered, as well. The author also explains how to practically implement the algorithms and data structures. He even provides exercises and challenges for the readers and shares invaluable insights from his extensive experience in the field.
+
+Get this book
+
+3. Structured Computer Organization 6th Edition by Andrew S. Tanenbaum, Todd Austin
+Who’s it for? Beginners and computer science students.
+Price: On sale
+This excellent book, co-penned by Andrew S. Tanenbaum and Todd Austin, is there for all undergraduate students and beginners wishing to learn how computers really work. The book is currently in its 6th edition and remains as one of the most popular works on the subject.
+
+Structured Computer Organization is a user-friendly guide through the world of computer hardware and architecture. It takes a layered approach and introduces new terms and concepts in bite-sized chunks. Tanenbaum and Austin write and inform in a relaxed tone while remaining accurate and on point.
+
+Get this book
+
+4. The Second Machine Age by Erik Brynjolfsson, Andrew McAfee
+Who’s it for? All levels
+Price: On sale
+The Second Machine Age was published back in 2014 and quickly gained the status of a contemporary classic. It was a New York Times Bestseller and remains a highly recommended read by computer science experts and teachers.
+
+In The Second Machine Age, MIT professors Erik Brynjolfsson and Andrew McAfee reveal the driving forces behind the recent revolution in search engine and machine learning technologies. Brynjolfsson and McAfee also give their vision of what the future has in store. According to them, the future is not all sunshine and rainbows and many companies will either adapt to the new technology or die.
+
+Get this book
+
+5. Algorithms to Live By by Brian Christian, Tom Griffiths
+Who’s it for? All levels
+Price: On sale
+Due to time and space constraints, human beings are constantly weighing what is the right thing to do, how much can be accomplished, and what is the right proportion of order and chaos in one’s life.
+
+In Algorithms to Live By, Brian Christian and Tom Griffiths claim that the quality of human life can improve tremendously if one embraced simple and powerful computer algorithms. Griffiths and Christian use a wide range of subjects, such as selecting a spouse, organizing your email inbox, and finding a parking spot to demonstrate how these algorithms work and bring optimal results.
+
+Get this book
+
+6. Game Theory for Security and Risk Management by Stefan Rass, Stefan Schauer
+Who’s it for? All levels
+Price: On sale
+Risk and security management i vital to all companies, big and small, and success in this field can determine a company’s future. Therefore, all managers, CEOs, and decision-makers worth their salt should constantly expand their knowledge on the topic.
+
+In Game Theory for Security and Risk Management, Schauer and Rass explain how managers and CEOs can apply various methods and concepts of game theory into their security and risk management decisions. The authors emphasize the importance of connecting practice and theory and give a step-by-step guide on how to select, adapt, analyze, and implement game theory models in real-life situations.
+
+Get this book
+
+7. The Self-Taught Programmer by Cory Althoff
+Who’s it for? Beginners
+Price: On sale
+Cory Althoff, the author of The Self-Taught Programmer, learned to code by himself. He landed a gig at eBay after a year of learning to code in Python 3. However, he was overwhelmed by how much he didn’t know and how poorly prepared he was for the challenges at work.
+
+Several years later, his experience with eBay prompted Althoff to put together The Self-Taught Programmer, an all-in-one guide for all beginners who are serious about becoming professional programmers. Aside from coding, Althoff also teaches other skills needed to land and keep a job in a high-profile tech company.
+
+You can expect to learn to use Bash, Git, databases, and regular expressions. The book also covers the basics of algorithms and data structures.
+
+Get this book
+
+8. The Computer Book by Simson L. Garfinkel, Rachel H. Grunspan
+Who’s it for? Beginners
+Price: On sale
+The Computer Book was published in 2018 as part of the Sterling Milestones series. Simson L. Garfinkel and Rachel H. Grunspan penned this unique journey through the history of computing from the abacus to artificial intelligence.
+
+The authors cover the 250 most important inventions and moments in the history of computing and computers. You’ll find on the pages of this book interesting facts and stories on everything from the Sumerian abacus and Morse code to Isaac Asimov’s laws of robotics, and through to video games, virtual reality, social media, and artificial intelligence.
+
+Get this book
+
+9. Code by Charles Petzold
+Who’s it for? All levels
+Price: On sale
+Code is a comprehensive journey through the world of coding. It was written for all who want to find out the inner workings of computers and programs but in a fun and engaging way.
+
+Charles Petzold explores the connections between the ways we manipulate language in our daily lives and computing. He tells a story about the development of computing using common language systems and everyday objects, such as Morse and Braille code, flashlights, black cats, and British invasion.
+
+Get this book
+
+10. Structure and Interpretation of Computer Programs 2nd Edition by Harold Abelson, Julie Sussman and Gerald Jay Sussman
+Who’s it for? All levels
+Price: On sale
+Popularly referred to as the “Wizard Book”, Structure and Interpretation of Computer Programs was first published in 1985. It quickly became the textbook in many computer science courses across the country. The 2nd edition came out in 1996.
+
+Abelson and Sussman teach the basic principles of computer programming, including modularity, abstraction, recursion, implementation, and programming language design. They use Scheme, a dialect of Lisp. They also use the assembler and virtual register machines for implementation of compilers and Lisp interpreters.
+
+Get this book
+
+Finding the Best Computer Science Books
+Well-written computer science books can help you take your programming to the next level and land a better paying job. Also, they can help you to better understand the connection between computing and everyday objects and communication systems.
+
+Knowledge is power. So, if you’re hungry for more knowledge, feel free to check out these blockchain books and personal finance books. If you’d like to learn more about economics in general, we recommend reading these economics books.
