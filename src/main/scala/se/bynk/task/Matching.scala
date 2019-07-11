@@ -2,7 +2,7 @@ package se.bynk.task
 
 trait Matcher {
   def apply(needle: String): List[(String, Int)]
-  def info: String
+  val info: String
 }
 
 object Matching {
@@ -16,7 +16,7 @@ object Matching {
         .sortWith(_._2 > _._2)
     }
 
-    def info = classifier.getClass.getSimpleName
+    val info = classifier.getClass.getSimpleName
   }
 
 }

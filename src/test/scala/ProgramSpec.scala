@@ -7,15 +7,16 @@ class ProgramSpec extends FlatSpec {
   trait FakeMatcher {
     val matcher = new Matcher {
       def apply(needle: String): List[(String, Int)] = List()
-      override def info: String = "Fake"
+      val info: String = "Fake"
     }
   }
   trait PreparedResultsMatcher {
     val matcher = new Matcher {
       def apply(needle: String): List[(String, Int)] = List(("Item", 100), ("Another", 50))
-      override def info: String = "PreparedResults"
+      val info: String = "PreparedResults"
     }
   }
+
   trait Streams {
     val readQueue = mutable.Queue[String]()
     val writeQueue = mutable.Queue[Any]()
