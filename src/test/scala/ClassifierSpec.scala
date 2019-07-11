@@ -3,7 +3,7 @@ import se.bynk.task._
 
 class ClassifierSpec extends FlatSpec {
   def simplify(classifier: Classifier) = (needle: String, hayStack: String) => {
-    classifier(needle, Some(List(needle, hayStack)))(hayStack)
+    classifier(needle)(hayStack.split(" ").toList)
   }
   trait SimpleClassifier {
     val classifier = simplify(SimpleClassifier)
@@ -63,10 +63,16 @@ class ClassifierSpec extends FlatSpec {
     val classifier = simplify(LevenshteinStringClassifier)
   }
 
-  "A LevenshteinClassifier" should "return almost maximum value" in new LevenshteinClassifier {
-    assert(classifier("metch", "match") === 4)
+  "A LevenshteinClassifier" should "return non-zero result for small different" in new LevenshteinClassifier {
+    assert(classifier("metch", "match") === 5000)
+  }
+  "A LevenshteinClassifier" should "return still high positive value if matches only part" in new LevenshteinClassifier {
+    assert(classifier("metch", "match even null nothing else matters here") > 100)
   }
   it should "return 0 for two irrelevant strings" in new LevenshteinClassifier {
     assert(classifier("bbbbb", "aaaaa") === 0)
+  }
+  it should "return non-zero for two far but different strings" in new LevenshteinClassifier {
+    assert(classifier("bbbbb", "aaaab") > 0)
   }
 }

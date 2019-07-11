@@ -47,8 +47,10 @@ object Program {
     } yield result
 
     results foreach {
-      case ((fileName, score), index) =>
+      case ((fileName, Right(score)), index) =>
         write(s"${index + 1}. $fileName score: $score\n")
+      case ((fileName, Left(_)), index) =>
+        write(s"${index + 1}. $fileName failed to load\n")
     }
 
     iterate(matcher, read, write)
