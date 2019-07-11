@@ -6,7 +6,7 @@ object Application extends App {
     .fold(
       err => println(err),
       file => {
-        val classifier = args.lastOption.map(Classifier.getClassifier)
+        val classifier = if (args.length > 1) args.lastOption.map(Classifier.getClassifier) else None
         val matcher = Program.prepareData(file, classifier.getOrElse(Classifier.default))
         Program.iterate(matcher)
       }
