@@ -28,7 +28,6 @@ class MatchingSpec extends FlatSpec {
     assert(result(0)._2 === Right(3) && result(0)._1 === "ccc")
     assert(result(1)._2 === Right(2) && result(1)._1 === "bb")
     assert(result(2)._2 === Right(1) && result(2)._1 === "a")
-
   }
 
 }
